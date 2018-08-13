@@ -26,16 +26,23 @@ class Roulette
 
   # Crear un método que lea el archivo rouletter_history.txt y retorne el valor
   # que más ha generado la ruleta históricamente.
-  def most_repetitive
+  def get_mode
+    arr = {}
     f = File.read('roulette_history.txt').split("\n")
     grouped = f.group_by { |number| number }
-    grouped.values.each { print |n| n.size }
+    i = 0
+    grouped.each_pair do |key, value|
+      arr[key.to_i] = value.length
+      i += 1
+    end
+    mode = arr.max_by { |_key, value| value }
+    puts mode[0]
   end
 
   def init
     play
     save_numbers
-    most_repetitive
+    get_mode
   end
 end
 
