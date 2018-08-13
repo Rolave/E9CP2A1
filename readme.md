@@ -59,7 +59,7 @@ Se pide:
 
         > En ambos el métodos argumento por defecto debe ser la fecha de hoy.
 
-        > Ambos métodos deben levantar una excepción si la fecha recibida es >= 2018-01-01.
+        > Ambos métodos deben levantar una excepción si la fecha recibida es >= 2019-01-01.
 
 ## Ejercicio 3: Ruleta.
 
